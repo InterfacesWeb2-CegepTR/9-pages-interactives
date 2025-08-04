@@ -1,0 +1,35 @@
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.banner {
+    background: url("../../img/banner-tropical.jpg") no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.banner {
+    h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+}
+.product-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.product-card {
+    img {
+    max-height: 200px;
+    object-fit: cover;
+    }
+}
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}

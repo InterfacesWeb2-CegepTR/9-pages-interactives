@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Agence de voyages Bon départ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Agence Bon départ</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Voyages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="banner">
+        <div class="container">
+            <h1 class="text-dark">Bienvenue <span id="nom-utilisateur"></span> à notre agence de voyages</h1>
+            <p class="lead text-dark">Découvrez nos voyages exclusifs à des prix exceptionnels</p>
+            <a href="#" class="btn btn-primary btn-lg">Voir les voyages</a>
+        </div>
+    </section>
+
+    <section>
+        <form>
+            <div class="container">
+                <h2 class="text-center mb-4 mt-4">Réservation de voyage</h2>
+                
+                <!-- Champ Nom -->
+                <div class="row justify-content-center my-4">
+                    <div class="col-md-4">
+                        <label for="nom" class="form-label">Nom</label>
+                        <input type="text" id="nom" name="nom" class="form-control" placeholder="Entrez votre nom" required>
+                    </div>
+                </div>
+
+                <!-- Champ Nombre de personnes avec boutons + et - -->
+                <div class="row justify-content-center my-4">
+                    <div class="col-md-4">
+                        <label for="nombre-de-personnes" class="form-label">Nombre de personnes</label>
+                        <div class="input-group">
+                            <button type="button" id="btn-moins" class="btn btn-outline-secondary">-</button>
+                            <input type="number" id="nombre-de-personnes" name="nombre-de-personnes" class="form-control text-center" value="1" min="1" required>
+                            <button type="button" id="btn-plus" class="btn btn-outline-secondary">+</button>
+                        </div>
+                        <p class="text-success d-none" id="message-rabais">Bravo! Vous êtes éligibles pour un rabais!</p>
+                    </div>
+                </div>
+
+                <!-- Bouton de soumission -->
+                <div class="row justify-content-center my-4">
+                    <div class="col-md-4">
+                        <button id="btn-reservation" type="submit" class="btn btn-primary w-100">Réserver</button>
+                    </div>
+                </div>
+
+                <!-- Section Total de la facture -->
+                <div class="row justify-content-center my-4">
+                    <div class="col-md-4">
+                        <h4>Total de la facture : <span id="total-facture">$0</span></h4>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <!-- Section Voyages -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Nos voyages</h2>
+        <div class="row">
+            <!-- Voyage 1 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="img/tropical.webp" class="card-img-top" alt="voyage 1">
+                    <div class="card-body">
+                        <h3 class="card-title">Voyage 1</h3>
+                        <p class="card-text">Description courte du voyage 1.</p>
+                        <a href="#" class="btn btn-primary">Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Voyage 2 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="img/desert.webp" class="card-img-top" alt="voyage 2">
+                    <div class="card-body">
+                        <h3 class="card-title">Voyage 2</h3>
+                        <p class="card-text">Description courte du voyage 2.</p>
+                        <a href="#" class="btn btn-primary">Acheter</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Voyage 3 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="img/snow.jpg" class="card-img-top" alt="voyage 3">
+                    <div class="card-body">
+                        <h3 class="card-title">Voyage 3</h3>
+                        <p class="card-text">Description courte du voyage 3.</p>
+                        <a href="#" class="btn btn-primary">Acheter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Commentaires -->
+    <section class="container my-5">
+        <h2 class="text-center">Commentaires</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <textarea id="commentaire" class="form-control" rows="4" placeholder="Ajoutez un commentaire..."></textarea>
+                <button id="btn-ajouter-commentaire" class="btn btn-primary mt-2 w-100">Ajouter un commentaire</button>
+                <ul id="liste-commentaires" class="list-group my-4"></ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bon départ. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
